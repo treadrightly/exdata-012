@@ -14,6 +14,6 @@ summary <- aggregate(baltimoreVehicleEmissions[,"Emissions"], by=list(baltimoreV
 names(summary) <- c("year", "emissions")
 
 png(filename="plot5.png", width=480, height=480)
-g <- qplot(data=summary, x=year, y=emissions, main="Coal Combustion", xlab="Year", ylab="Emissions") + geom_smooth(method="lm", se=FALSE) + theme_bw()
+g <- qplot(data=summary, x=year, y=emissions, main="Motor Vehicle Emissions", xlab="Year", ylab="Emissions") + geom_smooth(method="lm", se=FALSE) + theme_bw()
 print(g)
 dev.off()
